@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio website - Front-end Developer">
+    <title>Your Name - Front-end Developer</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- ============================================
+         EDIT HERE - CUSTOMIZE YOUR CONTENT
+         ============================================ -->
+    <!-- 
+        To customize this portfolio:
+        1. Replace all placeholder text below with your own information
+        2. Update the data attributes in the <body> tag if needed
+        3. Modify colors in css/styles.css (search for "Customize colors")
+        4. Add your profile image to assets/profile.jpg
+    -->
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" aria-label="Go to top">Portfolio</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="assets/profile.jpg" alt="Profile" class="profile-img" id="profileImg">
+                <h1 class="hero-name">Your Name</h1>
+                <p class="hero-title">Front-end Developer</p>
+                <p class="hero-summary">Building beautiful, accessible web experiences with clean code and modern best practices.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <button class="btn btn-secondary" id="copyEmailBtn" aria-label="Copy email address">
+                        Copy Email
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Responsive Design</span>
+                <span class="skill-tag">Accessibility</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-list">
+                <article class="experience-item">
+                    <div class="experience-header">
+                        <h3 class="experience-title">Senior Front-end Developer</h3>
+                        <span class="experience-company">Tech Company Inc.</span>
+                        <span class="experience-date">2022 - Present</span>
+                    </div>
+                    <ul class="experience-details">
+                        <li>Led front-end architecture improvements, reducing page load time by 40%</li>
+                        <li>Built reusable component library used across 5+ product teams</li>
+                        <li>Mentored 3 junior developers and established coding standards</li>
+                        <li>Improved accessibility scores from 75% to 95% across all products</li>
+                    </ul>
+                </article>
+
+                <article class="experience-item">
+                    <div class="experience-header">
+                        <h3 class="experience-title">Front-end Developer</h3>
+                        <span class="experience-company">StartupXYZ</span>
+                        <span class="experience-date">2020 - 2022</span>
+                    </div>
+                    <ul class="experience-details">
+                        <li>Developed responsive web applications serving 50K+ monthly users</li>
+                        <li>Implemented design system reducing development time by 30%</li>
+                        <li>Collaborated with designers and backend engineers in agile environment</li>
+                    </ul>
+                </article>
+
+                <article class="experience-item">
+                    <div class="experience-header">
+                        <h3 class="experience-title">Junior Developer</h3>
+                        <span class="experience-company">Digital Agency</span>
+                        <span class="experience-date">2019 - 2020</span>
+                    </div>
+                    <ul class="experience-details">
+                        <li>Built client websites using HTML, CSS, and JavaScript</li>
+                        <li>Maintained and updated existing codebases</li>
+                        <li>Participated in code reviews and team meetings</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3 class="project-title">E-Commerce Platform</h3>
+                    <p class="project-description">
+                        Built a full-featured e-commerce platform with React and TypeScript. 
+                        Implemented cart management, payment integration, and admin dashboard. 
+                        Resulted in 25% increase in conversion rate.
+                    </p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>TypeScript</span>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/yourusername/project1" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://project1-demo.com" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3 class="project-title">Task Management App</h3>
+                    <p class="project-description">
+                        Created a collaborative task management application with real-time updates. 
+                        Features include drag-and-drop, team collaboration, and progress tracking. 
+                        Used by 500+ active users.
+                    </p>
+                    <div class="project-tech">
+                        <span>Vue.js</span>
+                        <span>Firebase</span>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/yourusername/project2" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://project2-demo.com" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3 class="project-title">Portfolio Website</h3>
+                    <p class="project-description">
+                        Designed and developed a responsive portfolio website with smooth animations 
+                        and optimized performance. Achieved 100% Lighthouse score and improved SEO ranking.
+                    </p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/yourusername/project3" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://project3-demo.com" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Education & Certifications</h2>
+            <div class="education-list">
+                <div class="education-item">
+                    <h3 class="education-title">Bachelor of Science in Computer Science</h3>
+                    <p class="education-institution">University Name</p>
+                    <p class="education-date">2015 - 2019</p>
+                </div>
+                <div class="education-item">
+                    <h3 class="education-title">AWS Certified Developer</h3>
+                    <p class="education-institution">Amazon Web Services</p>
+                    <p class="education-date">2021</p>
+                </div>
+                <div class="education-item">
+                    <h3 class="education-title">Front-end Web Development Nanodegree</h3>
+                    <p class="education-institution">Udacity</p>
+                    <p class="education-date">2020</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-intro">I'm always open to discussing new opportunities and interesting projects.</p>
+            <div class="contact-info">
+                <a href="mailto:your.email@example.com" class="contact-email" id="contactEmail">your.email@example.com</a>
+                <div class="social-links">
+                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                        GitHub
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                        LinkedIn
+                    </a>
+                    <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Twitter profile">
+                        Twitter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <output class="toast" id="toast" aria-live="polite" aria-atomic="true">
+        <span class="toast-message">Email copied!</span>
+    </output>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
