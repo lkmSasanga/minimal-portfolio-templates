@@ -425,6 +425,7 @@ button {
     gap: var(--spacing-md);
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: var(--spacing-2xl);
     opacity: 0;
     animation: fadeInUp 0.8s ease-out 1s forwards;
 }
@@ -452,7 +453,7 @@ button {
 
 .hero__scroll-indicator {
     position: absolute;
-    bottom: var(--spacing-xl);
+    bottom: var(--spacing-2xl);
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -528,7 +529,7 @@ button {
     }
     
     .hero__scroll-indicator {
-        bottom: var(--spacing-md);
+        bottom: var(--spacing-lg);
     }
 }
 
