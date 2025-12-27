@@ -56,6 +56,8 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 90px; /* Account for sticky header */
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -66,6 +68,8 @@ body {
     background-color: var(--color-bg);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 img {
@@ -93,6 +97,11 @@ button {
     cursor: pointer;
 }
 
+main {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 /* ============================================
    Container
    ============================================ */
@@ -101,6 +110,7 @@ button {
     max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 var(--spacing-md);
+    box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
@@ -335,6 +345,12 @@ button {
     z-index: 0;
 }
 
+@media (max-width: 767px) {
+    .hero__background {
+        background-attachment: scroll; /* Better performance on mobile */
+    }
+}
+
 .hero__background::after {
     content: '';
     position: absolute;
@@ -372,7 +388,8 @@ button {
     max-width: 900px;
     margin-top: auto;
     margin-bottom: auto;
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-2xl) var(--spacing-md);
+    box-sizing: border-box;
 }
 
 .hero__content {
@@ -497,39 +514,93 @@ button {
 
 @media (max-width: 767px) {
     .hero {
-        min-height: 90vh;
-        padding: var(--spacing-xl) 0;
+        min-height: 100vh;
+        min-height: 100dvh; /* Use dynamic viewport height for mobile */
+        padding: 0;
+        padding-top: 70px;
+        padding-bottom: 80px; /* Space for scroll indicator */
+    }
+    
+    .hero__container {
+        padding: var(--spacing-xl) var(--spacing-md);
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .hero__content {
+        width: 100%;
     }
     
     .hero__title {
-        font-size: clamp(2rem, 10vw, 3rem);
+        font-size: clamp(1.75rem, 7vw, 2.5rem);
         margin-bottom: var(--spacing-md);
+        line-height: 1.2;
+        padding: 0 var(--spacing-xs);
+    }
+    
+    .hero__title-line {
+        display: block;
     }
     
     .hero__description {
-        font-size: var(--font-size-md);
-        margin-bottom: var(--spacing-lg);
+        font-size: clamp(0.9375rem, 3vw, 1rem);
+        margin-bottom: var(--spacing-xl);
+        padding: 0 var(--spacing-sm);
+        line-height: 1.6;
     }
     
     .hero__actions {
         flex-direction: column;
         align-items: stretch;
+        gap: var(--spacing-sm);
+        padding: 0 var(--spacing-sm);
+        margin-bottom: var(--spacing-lg);
     }
     
     .hero__actions .btn {
         width: 100%;
+        max-width: 100%;
     }
     
     .btn--large {
-        padding: var(--spacing-sm) var(--spacing-lg);
+        padding: var(--spacing-md) var(--spacing-lg);
+        font-size: var(--font-size-sm);
+        width: 100%;
+        text-align: center;
+        justify-content: center;
     }
     
     .btn--cta {
         animation: none; /* Disable pulse on mobile for better performance */
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+        margin: 0 auto;
+    }
+    
+    .btn--cta span {
+        text-align: center;
+        flex: 0 1 auto;
+        margin: 0;
+    }
+    
+    .btn--cta .btn__icon {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+        margin: 0;
     }
     
     .hero__scroll-indicator {
-        bottom: var(--spacing-lg);
+        bottom: var(--spacing-md);
+        font-size: 0.625rem;
+    }
+    
+    .hero__scroll-indicator svg {
+        width: 18px;
+        height: 18px;
     }
 }
 
@@ -661,6 +732,7 @@ button {
 .btn--cta span {
     position: relative;
     z-index: 1;
+    text-align: center;
 }
 
 .btn--cta .btn__icon {
@@ -695,6 +767,7 @@ button {
     overflow: hidden;
     margin: 0 auto;
     max-width: 1200px;
+    box-sizing: border-box;
 }
 
 .projects__grid {
@@ -703,6 +776,16 @@ button {
     will-change: transform;
     gap: var(--spacing-lg);
     padding: 0 var(--spacing-lg);
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .projects__grid {
+        padding: 0;
+        gap: var(--spacing-md);
+        justify-content: flex-start;
+        width: 100%;
+    }
 }
 
 .projects__nav-btn {
@@ -781,9 +864,24 @@ button {
 }
 
 @media (max-width: 767px) {
+    .projects__carousel {
+        margin-top: var(--spacing-md);
+    }
+    
+    .projects__wrapper {
+        padding: 0 var(--spacing-md);
+        display: flex;
+        justify-content: center;
+    }
+    
+    .projects__grid {
+        justify-content: flex-start;
+        width: 100%;
+    }
+    
     .projects__nav-btn {
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
     }
     
     .projects__nav-btn--prev {
@@ -797,6 +895,17 @@ button {
     .projects__nav-btn svg {
         width: 20px;
         height: 20px;
+    }
+    
+    .projects__dots {
+        margin-top: var(--spacing-md);
+        padding: 0 var(--spacing-md);
+    }
+    
+    .project-card {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
     }
 }
 
@@ -813,15 +922,25 @@ button {
     flex: 0 0 100%;
     width: 100%;
     max-width: 100%;
+    min-width: 0; /* Prevent flex items from overflowing */
     opacity: 0;
     pointer-events: none;
     transform: scale(0.95);
+    margin: 0 auto;
 }
 
 .project-card--active {
     opacity: 1;
     pointer-events: all;
     transform: scale(1);
+}
+
+@media (max-width: 767px) {
+    .project-card {
+        max-width: calc(100% - var(--spacing-lg) * 2);
+        width: calc(100% - var(--spacing-lg) * 2);
+        margin: 0 var(--spacing-lg);
+    }
 }
 
 @media (min-width: 768px) {

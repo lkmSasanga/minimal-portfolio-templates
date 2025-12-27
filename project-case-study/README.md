@@ -205,5 +205,177 @@ For issues or questions:
 
 ---
 
-**Perfect for dev/design portfolios & case studies.** Made with ❤️ using vanilla HTML, CSS, and JavaScript.
+## 🔧 Original Generation Prompt
 
+This template was generated using the following Cursor prompt:
+
+```text
+You are an expert front-end developer and UI designer. Generate a complete, production-ready, beginner-friendly portfolio template repo.
+
+GOAL
+Build "Project Case-Study Portfolio" — a modern, product-style single-page portfolio that showcases projects as real-world case studies.
+
+Hook:
+- Looks like a professional SaaS/product case study website.
+
+Wow feature:
+- Clicking a project opens a full-width case study view with a horizontal carousel (slides).
+
+TECH + CONSTRAINTS
+- Use ONLY vanilla HTML, CSS, and JavaScript.
+- No frameworks, no build tools, no external libraries.
+- Simple, readable code for beginners.
+- Fully responsive (mobile, tablet, desktop).
+- Accessible: semantic HTML, keyboard navigation, focus states.
+- Performance-focused: lightweight, minimal animations.
+- Use system font stack only.
+
+REPO STRUCTURE
+/
+  index.html
+  css/
+    styles.css
+  js/
+    main.js
+  assets/
+    project-1.jpg
+    project-2.jpg
+    project-3.jpg
+  README.md
+  LICENSE (MIT)
+  .gitignore
+
+DESIGN REQUIREMENTS
+- Clean, premium, product-style UI.
+- Soft shadows, subtle gradients, rounded cards.
+- Max width ~ 1100px centered.
+- Sections:
+  1) Sticky header (logo + nav)
+  2) Hero (intro + CTA: "View Case Studies")
+  3) Projects grid
+  4) Case study carousel section (hidden by default)
+  5) About / Skills
+  6) Contact
+  7) Footer
+
+PROJECT CARDS
+- Grid cards with:
+  - Image
+  - Title
+  - Short summary
+  - Tech tags
+- Hover effect: lift + shadow / border glow.
+- Clear CTA: "View Case Study".
+
+CASE STUDY CAROUSEL (MAIN FEATURE)
+- Hidden section shown when a project is clicked.
+- Layout:
+  - Back button (← All Projects)
+  - Project title + subtitle
+  - Carousel container.
+- Slides:
+  1) Overview (hero image + summary)
+  2) Problem
+  3) Solution
+  4) Key Features (bullets)
+  5) Tech Stack (tags)
+  6) Results / Impact
+  7) Links (Live + GitHub)
+
+CAROUSEL FUNCTIONALITY
+- Vanilla JS implementation:
+  - Next / Prev buttons.
+  - Swipe support for mobile.
+  - Keyboard arrows support.
+  - Dots or progress indicator.
+- Smooth transform-based sliding.
+- Reset to first slide when opening a new project.
+
+INTERACTION FLOW
+1) Click project card.
+2) Hide main sections.
+3) Show case study section.
+4) Load content dynamically.
+5) Back button returns to grid and scrolls up.
+
+REUSABILITY (VERY IMPORTANT)
+Make customization extremely easy:
+
+- Add a big "EDIT HERE" comment block in index.html.
+- In js/main.js define a PROJECTS array:
+
+[
+  {
+    id: "project-1",
+    title: "SaaS Dashboard",
+    subtitle: "Analytics platform for teams",
+    image: "assets/project-1.jpg",
+    shortDesc: "Track KPIs in real time.",
+    tech: ["HTML", "CSS", "JavaScript", "API"],
+    overview: "High-level intro of the project.",
+    problem: "The problem it solves.",
+    solution: "How it solves it.",
+    features: [
+      "Real-time charts",
+      "Auth system",
+      "Role-based access"
+    ],
+    results: "Improved engagement by 40%.",
+    liveLink: "#",
+    repoLink: "#"
+  }
+]
+
+- Render both:
+  - Project cards
+  - Case study slides
+from this array.
+- Users should only edit this config to update content.
+
+RESPONSIVE BEHAVIOR
+- Projects grid:
+  - 1 column (mobile)
+  - 2 columns (tablet)
+  - 3 columns (desktop)
+- Carousel slides stack vertically on mobile.
+- Sticky header collapses to simple mobile nav.
+
+STYLING
+- Use CSS variables for colors, spacing, radius.
+- Light theme by default (dark optional).
+- Subtle transitions only.
+
+NAV + UX
+- Smooth scroll nav.
+- Active link highlight on scroll.
+- Sticky header with background blur.
+- Scroll to top when opening case study.
+
+README.md REQUIREMENTS
+Include:
+- Overview + screenshot placeholders.
+- Quick start (open index.html).
+- Customization guide:
+  - Edit PROJECTS array.
+  - Change CSS variables.
+- How carousel works.
+- Deploy guide (GitHub Pages).
+- MIT license note.
+
+DELIVERABLE
+Output full contents of:
+- index.html
+- css/styles.css
+- js/main.js
+- README.md
+- LICENSE
+- .gitignore
+
+EXTRA
+- Keep UI premium but code simple.
+- No unnecessary complexity.
+- Everything in a single page.
+```
+---
+
+**Perfect for dev/design portfolios & case studies.** Made with ❤️ using vanilla HTML, CSS, and JavaScript.
