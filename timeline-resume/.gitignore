@@ -1,4 +1,4 @@
-# OS files
+# OS Files
 .DS_Store
 .DS_Store?
 ._*
@@ -6,8 +6,9 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+Desktop.ini
 
-# Editor directories and files
+# Editor Files
 .vscode/
 .idea/
 *.swp
@@ -28,10 +29,8 @@ yarn-error.log*
 *.temp
 .cache/
 
-# Optional: Ignore large image files during development
-# Uncomment if needed
-# *.jpg
-# *.png
-# *.jpeg
-# *.gif
+# Optional: Uncomment if you add build tools later
+# node_modules/
+# dist/
+# build/
 
