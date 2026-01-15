@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Modern Bento Grid Portfolio Template">
+  <title>Portfolio | Bento Grid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Sticky Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#hero" class="logo" aria-label="John Doe - Home">John Doe</a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="btn btn-primary btn-download" id="cvBtn">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M9 12V3M9 12L5 8M9 12L13 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M3 15H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        Download CV
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-card">
+          <div class="hero-skeleton-decoration" aria-hidden="true">
+            <div class="skeleton-line skeleton-line-1"></div>
+            <div class="skeleton-line skeleton-line-2"></div>
+            <div class="skeleton-line skeleton-line-3"></div>
+            <div class="skeleton-line skeleton-line-4"></div>
+            <div class="skeleton-line skeleton-line-5"></div>
+          </div>
+          <div class="hero-content">
+            <h1 class="hero-title" id="heroTitle">Full Stack Developer</h1>
+            <p class="hero-summary" id="heroSummary">Building beautiful digital experiences with modern web technologies.</p>
+            <div class="hero-stats" id="heroStats">
+              <!-- Stats rendered by JS -->
+            </div>
+            <div class="hero-social" id="heroSocial">
+              <!-- Social links rendered by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento Grid Section -->
+    <section class="bento-section" id="skills">
+      <div class="container">
+        <div class="bento-grid" id="bentoGrid">
+          <!-- Bento cards rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <h2 class="section-title">Recent Projects</h2>
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Projects rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="contact-text">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+          <div class="contact-info">
+            <div class="contact-item contact-item-email" id="emailContactItem">
+              <span class="contact-label">Email</span>
+              <div class="contact-value-wrapper">
+                <span class="contact-value" id="emailValue">john@example.com</span>
+                <button class="btn-copy" id="copyEmailBtn" aria-label="Copy email" title="Copy email">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.5 4.5H3.5C2.67 4.5 2 5.17 2 6v6.5c0 .83.67 1.5 1.5 1.5H10c.83 0 1.5-.67 1.5-1.5V6c0-.83-.67-1.5-1.5-1.5H8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M5.5 2.5h6c.83 0 1.5.67 1.5 1.5v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Location</span>
+              <div class="contact-value-wrapper contact-value-wrapper-centered">
+                <span class="contact-value" id="locationValue">San Francisco, CA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="currentYear"></span> <span id="footerName">Your Name</span>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="alert" aria-live="polite">
+    <div class="toast-content">
+      <svg class="toast-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.667 5L7.5 14.167L3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="toast-text" id="toastText">Copied to clipboard!</span>
+    </div>
+  </div>
+
+  <!-- Simple Modal for Case Study -->
+  <dialog class="modal" id="modal" aria-labelledby="modalTitle">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+      <h2 class="modal-title" id="modalTitle">Case Study</h2>
+      <div class="modal-body" id="modalBody">
+        <!-- Modal content rendered by JS -->
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ============================================
+       ⚠️ EDIT HERE - CUSTOMIZE YOUR PORTFOLIO ⚠️
+       ============================================
+       All customization happens in js/main.js
+       Look for the CONFIG object at the top.
+       You can also customize colors and spacing
+       in css/styles.css (CSS variables section).
+       ============================================ -->
+
+  <script src="js/main.js"></script>
+</body>
+</html>

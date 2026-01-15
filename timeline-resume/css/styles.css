@@ -83,7 +83,6 @@ body {
     color: var(--color-text);
     background: linear-gradient(135deg, var(--color-bg-gradient-start) 0%, var(--color-bg-gradient-end) 100%);
     background-attachment: fixed;
-    cursor: none; /* Hide default cursor */
 }
 
 /* ============================================
@@ -243,7 +242,6 @@ body {
     gap: 4px;
     background: none;
     border: none;
-    cursor: pointer;
     padding: var(--spacing-xs);
 }
 
@@ -385,7 +383,6 @@ body {
     font-weight: 600;
     transition: var(--transition);
     border: 2px solid transparent;
-    cursor: pointer;
     font-size: var(--font-size-base);
 }
 
@@ -516,6 +513,17 @@ section {
     background: var(--color-bg);
     position: relative;
     overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-2xl) 0;
+}
+
+.skills .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .skills::before {
@@ -597,7 +605,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     transition: all 0.3s ease;
     flex-shrink: 0;
     z-index: 2;
@@ -1146,7 +1153,6 @@ section {
 .btn-copy {
     background: none;
     border: none;
-    cursor: pointer;
     color: var(--color-text-light);
     padding: var(--spacing-xs);
     display: flex;
@@ -1321,6 +1327,12 @@ section {
         text-align: center;
     }
     
+    .skills {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    
     .skills-wrapper {
         gap: var(--spacing-xs);
     }
@@ -1410,6 +1422,12 @@ section {
     
     .timeline-item-content {
         padding: var(--spacing-sm);
+    }
+    
+    .skills {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
     }
     
     .skill-category {
