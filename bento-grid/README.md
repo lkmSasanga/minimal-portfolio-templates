@@ -229,6 +229,130 @@ If you have questions or need help customizing the template:
 2. Review the CONFIG object structure
 3. Open an issue on GitHub
 
+## 📋 Initial Development Prompt
+
+This template was built using the following initial prompt:
+
+```
+You are an expert front-end developer and UI designer. Build a premium "Bento Grid" modern portfolio template that is highly shareable on YouTube (great first 3 seconds) and easy for beginners to reuse.
+
+GOAL
+Template #05 — "Bento Grid Modern Portfolio"
+Hook: trendy bento layout (high CTR)
+Wow feature: responsive bento grid with a featured project block
+Shorts: "Bento grid in 20s", "Responsive grid trick"
+
+TECH + CONSTRAINTS
+- Vanilla HTML, CSS, and JavaScript only (no frameworks).
+- Use CSS Grid for the bento layout.
+- Modern, minimal, high-contrast UI (good for thumbnails).
+- Fully responsive (mobile/tablet/desktop).
+- Accessible: semantic HTML, focus states, keyboard-friendly.
+- Fast: no heavy animations, minimal JS.
+- System font stack only.
+
+REPO STRUCTURE
+/
+  index.html
+  css/
+    styles.css
+  js/
+    main.js
+  assets/
+    avatar.png (placeholder filename only)
+    project-1.jpg
+    project-2.jpg
+    project-3.jpg
+  README.md
+  LICENSE (MIT)
+  .gitignore
+
+VISUAL DESIGN (MAKE IT LOOK PREMIUM)
+- Dark theme by default (better thumbnails), with subtle gradient background and faint noise/grid pattern (CSS-only).
+- Cards: rounded corners, soft shadow, thin border, subtle hover lift + glow.
+- Consistent spacing and typography scale.
+- Use CSS variables for theme tokens:
+  --bg, --panel, --text, --muted, --border, --brand, --radius, --shadow, --space-*
+
+PAGE SECTIONS
+1) Sticky header:
+   - name/logo left, nav right, CTA button "Download CV" or "Contact"
+2) Hero card:
+   - big headline + short summary + social links
+   - small stat chips (e.g., "5+ Projects", "3 Years", "Open to Work" placeholders)
+3) Bento Grid (MAIN)
+   - a grid of cards with varying sizes (featured card spans multiple rows/cols)
+   - include:
+     - Featured Project card (largest)
+     - Skills card
+     - About mini card
+     - Latest project card
+     - Tools/stack card
+     - Contact card or availability card
+4) Projects list section (optional) below grid: 3 smaller cards
+5) Contact section
+6) Footer
+
+BENTO GRID REQUIREMENTS (IMPORTANT)
+- Use CSS Grid to create a bento layout with variable card sizes.
+- The grid should adapt smoothly across breakpoints:
+  - Mobile: single column stack (cards full width).
+  - Tablet: 2 columns.
+  - Desktop: 3–4 columns with featured block spanning.
+- Implement layout using grid + responsive rules (media queries).
+- Prefer modern grid techniques like minmax() for flexible sizing. (minmax is designed for grid sizing ranges.) 
+- DO NOT overcomplicate; keep readable CSS.
+- Ensure no awkward gaps or overflow.
+
+FEATURED PROJECT CARD (WOW)
+- Big title + short case-study style blurb (Problem → Solution → Impact in 2 lines).
+- Tags pills (e.g., "Next.js", "AWS", "Stripe" placeholders).
+- "View Case Study" button (scrolls to a section or opens a simple modal).
+- Add a subtle "shine" hover effect (optional but tasteful).
+
+REUSABILITY (MOST IMPORTANT)
+Make it super easy to customize:
+- Add a big "EDIT HERE" section in index.html.
+- In js/main.js create ONE CONFIG object:
+  - profile: name, role, summary, location, email, socials, cvLink
+  - stats: [{label, value}]
+  - featuredProject: {title, summary, tags[], links}
+  - bentoCards: array defining cards content (type: skills/about/project/tools/contact)
+  - projects: [{title, desc, tags[], liveLink, repoLink}]
+- Render:
+  - Hero details from CONFIG
+  - Featured card from CONFIG
+  - Skills tags from CONFIG
+  - Projects from CONFIG
+Users should mostly only edit CONFIG.
+
+INTERACTIONS
+- Smooth scroll for nav links.
+- "Copy Email" button with small toast ("Copied!").
+- Card hover: lift + subtle glow.
+- Optional: simple modal for "Case Study" (ESC to close, focus trap not required but nice).
+
+README.md
+- Overview + screenshot placeholder
+- Quick start (open index.html)
+- Customization guide (edit CONFIG + CSS variables)
+- Deploy guide (GitHub Pages)
+- License info
+
+DELIVERABLE
+Output full contents of:
+- index.html
+- css/styles.css
+- js/main.js
+- README.md
+- LICENSE
+- .gitignore
+
+EXTRA (HIGH RETENTION)
+- Make the first screen visually striking: hero + bento grid visible without scrolling on desktop.
+- Keep code clean and beginner-friendly with comments.
+```
+
 ---
 
 **Made with ❤️ for developers who want a beautiful portfolio without the complexity.**
