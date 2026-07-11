@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#F7F4EF"/>
+  <rect x="48" y="48" width="1104" height="534" stroke="#D6D0C8" stroke-width="1"/>
+  <line x1="80" y1="160" x2="280" y2="160" stroke="#B8A88A" stroke-width="1"/>
+  <text x="80" y="140" fill="#78716C" font-family="ui-monospace, monospace" font-size="18" letter-spacing="4">QUIET PRECISION</text>
+  <text x="80" y="280" fill="#1C1917" font-family="Georgia, serif" font-size="72">Julian Hale</text>
+  <text x="80" y="350" fill="#78716C" font-family="system-ui, sans-serif" font-size="28">Software Engineer · Cloud Architect</text>
+  <text x="80" y="520" fill="#A8A29E" font-family="ui-monospace, monospace" font-size="16" letter-spacing="2">I design reliable digital systems for products built to last.</text>
+  <rect x="900" y="180" width="180" height="220" stroke="#B8A88A" stroke-width="1"/>
+  <rect x="940" y="230" width="140" height="140" stroke="#1C1917" stroke-opacity="0.2" stroke-width="1"/>
+  <circle cx="1040" cy="290" r="4" fill="#B8A88A"/>
+</svg>
