@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  --background: #02040a;
+  --foreground: #e8eef7;
+  --muted: #8b9bb4;
+  --accent-cyan: #5eead4;
+  --accent-sky: #38bdf8;
+  --accent-amber: #fbbf24;
+  --surface: #0a1220;
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(45, 212, 191, 0.3);
+  color: #f8fafc;
+}
+
+.font-display {
+  font-family: var(--font-display), system-ui, sans-serif;
+}
+
+.font-body {
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.font-mono {
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
+
+/* Homepage: lock scroll — immersive scene only */
+html.universe-lock,
+html.universe-lock body {
+  overflow: hidden;
+  height: 100%;
+  overscroll-behavior: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
